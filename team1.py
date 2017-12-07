@@ -1,4 +1,4 @@
-#Makayla test cat roseGold
+#Makayla test cat roseGold a
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
