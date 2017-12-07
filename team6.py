@@ -1,4 +1,4 @@
-#Bennett
+#Bennett blue cat
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
