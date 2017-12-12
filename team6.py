@@ -20,7 +20,6 @@ def move(my_history, their_history, my_score, their_score):
         return'c'
     if their_history[-2] == 'c' and their_history[-1]=='c':
         return 'c'
-        my_score += 1100
     if their_history[-1]=='b':
         return 'b'
     if len(my_history) ==199:
