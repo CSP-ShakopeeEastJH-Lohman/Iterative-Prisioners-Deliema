@@ -8,8 +8,8 @@
 ####
 
 team_name = 'Team Dio' # Only 10 chars displayed.
-strategy_name = 'ZA WURUDO'
-strategy_description = 'Focus on betraying, however if the enemy is very compliant then start complying.'
+strategy_name = 'ZA WURDO'
+strategy_description = 'Anaylze their_history for patterns and counter them'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -18,10 +18,37 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
-    if my_history == 0:
+    if len(my_history) == 0 or 1:
         return 'b'
-    if their_score <= -15000 / len(their_history):
+    if their_history[-1] == their_history[-3]: #cbc/bcb counter
+        if their_history[-1] == 'c':
+            return 'b'
+        if their_history[-1] == 'b':
+            return 'c'
+    if their_history[-1] == their_history[-4]: #cbb/bcc counter
+        if their_history[-1] == 'c':
+            return 'b'
+        if their_history[-1] == 'b':
+            return 'c'
+    if their_history[-1] == their_history[-5]: #cccb/bbbc counter
+        if their_history[-1] == 'b':
+            return 'c'
+        if their_history[-1] == 'c':
+            return 'b'
+    if their_history[-1] and their_history[-4] == 'c': #ccccc to c
+        if their_history[-2] and their_history[-3] == 'c':
+            return 'c'
+    if their_history[-1] and their_history[-2] == 'c': #cc to b
         return 'b'
+    if their_history[-1] and their_history[-2] == 'b': #bb to b
+        return 'b'
+    if their_history[-1] != their_history[-2]: #cb/bc
+        if their_history[-1] == 'b':
+            return 'c'
+        if their_history[-1] == 'c':
+            return 'b'
+        
+    
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].
