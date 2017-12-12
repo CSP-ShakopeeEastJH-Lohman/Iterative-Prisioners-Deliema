@@ -1,6 +1,6 @@
 #Makayla
 
-team_name = 'no bueno'
+team_name = 'no me gusta'
 strategy_name = 'yah'
 strategy_description = 'it tries its best'  
     
@@ -8,8 +8,6 @@ def move(my_history, their_history, my_score, their_score):
     '''basic start'''
     if len(my_history) == 0:
         return 'b'
-    if len(my_history) == 1:
-        return 'c'
         
     '''checks the basic c,b,c,b,c,b pattern'''
     if their_history[-1] == their_history[-3]:
