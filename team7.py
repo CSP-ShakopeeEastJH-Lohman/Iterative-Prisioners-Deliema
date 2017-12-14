@@ -1,4 +1,3 @@
-#Lance & Thomas
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
@@ -6,12 +5,33 @@
 #     strategy_description: a string
 #     move: A function that returns 'c' or 'b'
 ####
+#Description, we collude when they coolude but betray after a few colludes, and we brtray a lot
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+team_name = 'Lance & Thomas Black Unicorn' # Only 10 chars displayed.
+strategy_name = 'Winner'
+strategy_description = 'WE collude when they coolude but betray after a few colludes, and we betray a lot'
+'
     
-def move(my_history, their_history, my_score, their_score):
+def move(my_history,their_history, my_score, their_score):
+    if my_history == 0:
+        return 'c'
+    if my_history == 99:
+        return 'b'
+    if their_history[-1] and their_history[-2]=='b':
+        return 'b'
+    if their_history [-1] and their_history [-2] and their_history [-3] and their_history [-4] and their_history [-5] == 'c':
+        return 'b'
+    if their_history[-1] and their_history[-2] and their_history[-3] == 'c':
+        return 'b'
+    if their_history[-1] and my_history[-1] == 'c':
+        return 'c'
+    if my_history == 199:
+        return 'b'
+    if their_history > 0:
+        return 'b' 
+    
+    
+    
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
     
