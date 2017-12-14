@@ -24,7 +24,14 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'
     if len(my_history) ==199:
         return 'b'
-    
-    
+    if their_history[-1:-4]==['c','c','c','c']:
+        return 'c'
+    if their_history[-1:-4]==['b','b','b','b']:
+        return 'b'
+    if their_history[-1:-4]==['c','b','c','b']:
+        return 'c'
+    else:
+        return'b'
 
-    
+
+
