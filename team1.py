@@ -11,7 +11,7 @@ def move(my_history, their_history, my_score, their_score):
         
     '''checks the basic c,b,c,b,c,b pattern'''
     if their_history[-1] == their_history[-3]:
-        if their_history[-1] == 'c':
+        if their_history[-1] == 'c': 
             return 'b'
         elif their_history[-1] == 'b':
             return 'c'
@@ -31,9 +31,9 @@ def move(my_history, their_history, my_score, their_score):
             return 'b'
         
     '''checking for very repetitive patterns'''
-    if their_history[-1] and their_history[-2] and their_history[-3] and their_history[-4] == 'b':
+    if their_history[-1: -4] == 'b':
         return 'b'
-    if their_history[-1] and their_history[-2] and their_history[-3] and their_history[-4] == 'c':
+    if their_history[-1: -4] == 'c':
         return 'b'
         
     '''score plans'''
