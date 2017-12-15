@@ -1,4 +1,7 @@
-#Seth & Devin
+team_name = 'Devin & Seth red pork'
+strategy_name = 'conclude most of the time unless bertrayed in the last ten rounds '
+strategy_description = 'Betray if ever betrayed'
+move = ' do c or b'
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
@@ -7,12 +10,9 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
     
-def move(my_history, their_history, my_score, their_score):
-    ''' Arguments accepted: my_history, their_history are strings.
+
+''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
     
     Make my move.
@@ -26,3 +26,15 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
+
+
+def move(my_history, their_history, my_score, their_score):
+    if len(my_history) < 3:
+        return 'c'
+    if their_history[0] == 'c' and their_history[1] == 'c' and their_history[2] == 'c':
+        return 'c'
+    if 'b' in their_history[0:10]: 
+        return 'b'
+    else:
+        return 'c'
+    
