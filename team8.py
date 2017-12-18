@@ -9,7 +9,7 @@
 
 team_name = 'Ratatoskr!' # Only 10 chars displayed.
 strategy_name = 'Yggdrasil'
-strategy_description = 'Based_on_what_you_do'
+strategy_description = 'Copycat'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
