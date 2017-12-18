@@ -14,6 +14,8 @@ strategy_description = 'If they vetray, btray everysingle time. If they dont, co
 def move(my_history, their_history, my_score, their_score):
     if len(my_history) == 0:
         return 'c'
+    if len(my_history) == 199:
+        return 'b'
     if my_history[-1] == 'b':
        return 'b' 
     if len(my_history) < 2 and their_history[-1] == 'c':
