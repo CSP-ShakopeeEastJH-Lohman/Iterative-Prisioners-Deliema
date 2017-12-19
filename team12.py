@@ -1,4 +1,4 @@
-#Tony
+#Tony Test Pterodactyal Red
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
