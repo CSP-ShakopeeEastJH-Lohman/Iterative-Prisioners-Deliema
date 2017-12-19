@@ -18,7 +18,7 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. g
     '''
-    if len(my_history) == 0 or 1:
+    if len(my_history) <= 5:
         return 'b'
     if their_history[-1] == their_history[-3]: #cbc/bcb counter
         if their_history[-1] == 'c':
