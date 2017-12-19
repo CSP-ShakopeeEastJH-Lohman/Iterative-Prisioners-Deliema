@@ -1,9 +1,9 @@
-team_name = 'Devin & Seth red pork'
-strategy_name = 'conclude most of the time unless bertrayed in the last ten rounds '
+team_name = 'Devin & Seth'
+strategy_name = 'Collude all the time unless betrayed in the first ten rounds then betray the rest of the game  '
 strategy_description = 'Betray if ever betrayed'
 move = ' do c or b'
 ####
-# Each team's file must define four tokens:
+# Each team's file must define four tokens:\\\
 #     team_name: a string
 #     strategy_name: a string
 #     strategy_description: a string
