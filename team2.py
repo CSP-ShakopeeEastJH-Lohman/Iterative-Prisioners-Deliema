@@ -8,8 +8,8 @@
 ####
 
 team_name = 'Raj' # Only 10 chars displayed.
-strategy_name = 'Collude, if Betrayed then betray'
-strategy_description = 'If they vetray, btray everysingle time. If they dont, collude'
+strategy_name = 'Collude until betrayed. Betray at the end.'
+strategy_description = 'If they betray, betray every single time. If they dont, collude'
     
 def move(my_history, their_history, my_score, their_score):
     if len(my_history) == 0:
