@@ -7,7 +7,7 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = ':b:eter \'n :b:ichael' # Only 10 chars displayed.
+team_name = 'PeterNMike' # Only 10 chars displayed.
 strategy_name = 'Collude, check patterns, if they betray we betray'
 strategy_description = 'Collude early on, if they continue to collude, collude or else betray'
     
@@ -17,8 +17,13 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. g
     '''
-    if len(my_history) <= 5: 
+    if len(my_history) == 0:
         return 'c'
+    if len(my_history) <= 5:
+        if their_history[-1] == 'b':
+            return 'b'
+        else:
+            return 'c'
     if their_history[-1] == their_history[-3]: #cbc/bcb counter
         if their_history[-1] == 'c':
             return 'b'
