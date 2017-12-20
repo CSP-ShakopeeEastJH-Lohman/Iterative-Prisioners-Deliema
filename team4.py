@@ -1,6 +1,6 @@
 team_name = 'Max_Dom' # Only 10 chars displayed.
-strategy_name = 'play the player'
-strategy_description = 'We play the player not the game'
+strategy_name = 'physolmololgy'
+strategy_description = 'We read the other players mind'
     
 def move(my_history, their_history, my_score, their_score):
     
@@ -10,6 +10,10 @@ def move(my_history, their_history, my_score, their_score):
     if their_history [-1] == 'b':
         if their_history [-2] == 'b':
             return 'b'
+            
+    if their_history [-1] == 'c':
+        if their_history [-2] == 'c':
+            return 'c'
             
     if their_history [-1] == 'b':
         return 'c'
