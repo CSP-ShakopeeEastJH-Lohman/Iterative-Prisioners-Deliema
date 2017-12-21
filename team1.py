@@ -6,19 +6,13 @@ strategy_description = 'Tit for tat, check for repetitive patterns.'
     
 def move(my_history, their_history, my_score, their_score):
     '''basic start'''
-    colludeLast = False
     
     if len(my_history) < 3:
         return 'c'
 
-    while their_history.count('b') == 0:
+    if their_history.count('b') == 0:
         return 'c'
-        colludeLast = False
     if their_history.count('b') >= 1:
-        return 'b'
-        colludeLast = True
-
-    if colludeLast == True:
         '''checking for very repetitive patterns'''
         if their_history[-1: -4] == 'b':
             return 'b'
@@ -31,4 +25,4 @@ def move(my_history, their_history, my_score, their_score):
         if their_history[-1] == 'b':
             return 'b'
         if their_history[-1] == 'c':
-            return 'c'
+            return 'c'  
