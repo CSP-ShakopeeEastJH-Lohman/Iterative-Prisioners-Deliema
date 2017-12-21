@@ -9,7 +9,7 @@
 ####
 
 team_name = 'Zachs team' # Only 10 chars displayed.
-strategy_name = 'oof'
+strategy_name = 'play what they played 2 games ago.'
 strategy_description = 'The strategy is to play what they played 2 games ago.'
     
 def move(my_history, their_history, my_score, their_score):
