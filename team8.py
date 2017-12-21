@@ -8,8 +8,8 @@
 ####
 
 team_name = 'Ratatoskr!' # Only 10 chars displayed.
-strategy_name = 'Yggdrasil'
-strategy_description = 'Based_on_what_you_do'
+strategy_name = 'We cOPy You BEcause We ARe MEEan'
+strategy_description = 'Copycatten in a boxen with a flock of moosen'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -32,7 +32,10 @@ def move(my_history, their_history, my_score, their_score):
 
     elif len(their_history) == 199:
         return 'b'
-
+        
+    if my_history[-1] == 'c' and my_history[-2] == 'b' and my_history[-3] == 'c' and my_history[-4] == 'b':
+        return 'c'
+    
     elif their_history[-1] == 'c':
             return 'c'
 
