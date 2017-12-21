@@ -11,7 +11,7 @@ import webbrowser
 
 team_name = 'Ratatoskr!' # Only 10 chars displayed.
 strategy_name = 'We cOPy You BEcause We ARe MEEan'
-strategy_description = 'Copycat'
+strategy_description = 'Copycatten in a boxen with a flock of moosen'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
