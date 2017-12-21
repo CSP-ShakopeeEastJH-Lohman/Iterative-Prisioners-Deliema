@@ -7,8 +7,8 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
+team_name = 'zach welna' # Only 10 chars displayed.
+strategy_name = 'calude unless they betray'
 strategy_description = 'How does this strategy decide?'
     
 def move(my_history, their_history, my_score, their_score):
@@ -22,11 +22,13 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'
     if their_history[-1] == 'c':
         return 'c'
-    
-    if their_score> 0:
+    if their_history[-2] == 'b':
         return 'b'
-    if my_score > their_score:
-        return'b'
+    if their_history[-1] == 'c':
+        return 'b' 
+    
+    
+    
     
     
     
