@@ -11,11 +11,11 @@ def move(my_history, their_history, my_score, their_score):
         if their_history[-1] == 'c' and their_history[-2] == 'c':
             return 'c'
     if len(their_history) > 5:
+    if len(their_history) > 3:
         return 'c'
     else:
         if their_history[-1] == 'b'or their_history[-2] == 'b':
             return 'b'
-        elif their_score > 0 and their_history[-1] == 'b' or 'c':
             return 'b'
         else:
             return 'c'
