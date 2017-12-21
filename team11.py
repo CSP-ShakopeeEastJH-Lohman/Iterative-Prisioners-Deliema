@@ -12,7 +12,7 @@ strategy_name = '''
 Collude all the time unless betrayed in the first ten rounds then'
 betray the rest of the game but if they collude the whole time we will betray on round 200
 '''
-strategy_description = 'Betray if ever betray and betray at the end '
+strategy_description = 'Betray if ever betray and betray at the end  '
     
 
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
@@ -27,12 +27,13 @@ def move(my_history, their_history, my_score, their_score):
     if len(my_history) < 3:
         return 'c'
     if their_history[0] == 'c' and their_history[1] == 'c' and their_history[2] == 'c':
-        return 'c'
-    
+        if len(their_history) == 198:
+            return 'b'
+        else:
+            return 'c'   
     if 'b' in their_history[0:10]: 
         return 'b'
     else:
         return 'c'
         
-    if their_history[198] == 'c' and their_history [199] =='c':
-        return 'b'
+   
