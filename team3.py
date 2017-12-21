@@ -8,7 +8,7 @@
 ####
 
 team_name = 'PeterNMike' # Only 10 chars displayed.
-strategy_name = 'Collude, check patterns, if they betray we betray'
+strategy_name = 'Collude, if they betray last round, betray'
 strategy_description = 'Collude early on, if they continue to collude, collude or else betray'
     
 def move(my_history, their_history, my_score, their_score):
@@ -19,32 +19,15 @@ def move(my_history, their_history, my_score, their_score):
     '''
     if len(my_history) == 0:
         return 'c'
-    if len(my_history) <= 5:
-        if their_history[-1] == 'b':
+    if len(my_history) <= 5: #collude first 5 rounds
+        if their_history[-1] == 'b': #betray if they betray
             return 'b'
         else:
             return 'c'
-    if their_history[-1] == their_history[-3]: #cbc/bcb counter
-        if their_history[-1] == 'c':
-            return 'b'
-        if their_history[-1] == 'b':
-            return 'c'
-    if their_history[-1] == their_history[-4]: #cbb/bcc counter
-        if their_history[-1] == 'c':
-            return 'b'
-        if their_history[-1] == 'b':
-            return 'c'
-    if their_history[-1] == their_history[-5]: #cccb/bbbc counter
-        if their_history[-1] == 'b':
-            return 'c'
-        if their_history[-1] == 'c':
-            return 'b'
     if their_history[-1] and their_history[-4] == 'c': #cccc to c
         if their_history[-2] and their_history[-3] == 'c':
             return 'c'
-    if their_history[-1] and their_history[-2] == 'b': #bb to b
-        return 'b'
-    if their_score > 0: #filthy traitor
+    if their_history[-1] == 'b': #b to b
         return 'b'
     else:
         return 'b'
