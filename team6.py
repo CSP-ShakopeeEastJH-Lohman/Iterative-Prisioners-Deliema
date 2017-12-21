@@ -14,10 +14,10 @@ strategy_description = 'Picks pattern and decides'
 def move(my_history, their_history, my_score, their_score):
     if len(my_history)== 0:
         return 'c'
-    if their_history[-1]== 'b':
-        return 'b'
     if len(my_history) < 2 and their_history[-1]== 'c':
         return'c'
+    if their_history[-1]== 'b':
+        return 'b'
     if their_history[-2] == 'c' and their_history[-1]=='c':
         return 'c'
     if their_history[-2] == 'b' and their_history[-1]=='b':
